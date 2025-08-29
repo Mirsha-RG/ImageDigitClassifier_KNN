@@ -18,9 +18,15 @@ Permite reconocer números escritos a mano o generados digitalmente, usando KNN 
 - Mejor KNN encontrado: {'n_neighbors': 3, 'weights': 'distance', 'p': 2}  
 - Mejor score en validación cruzada: 0.985  
 - Matrices de confusión y métricas comparativas muestran la mejora respecto al modelo manual.
-- Todos los resultados generados por el script (métricas, matrices de confusión y clasificación) se guardan en:
 
-👉 [docs/resultados.txt](docs/resultados.txt)
+### Matriz de confusión - KNN Manual
+![Matriz manual](docs/matriz_confusion_manual.png)
+
+### Matriz de confusión - KNN Optimizado
+![Matriz optimizado](docs/matriz_confusion_optimizado.png)
+
+Puedes consultar todos los resultados completos aquí: 👉 [docs/resultados.txt](docs/resultados.txt)
+
 
 ---
 
