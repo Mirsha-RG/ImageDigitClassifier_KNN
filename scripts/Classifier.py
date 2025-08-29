@@ -1,3 +1,13 @@
+import sys
+import os
+# Crear carpeta docs si no existe
+os.makedirs("docs", exist_ok=True)
+
+# Abrir archivo para guardar resultados
+log_file = open("docs/resultados.txt", "w", encoding="utf-8")
+
+# Redirigir los prints al archivo
+sys.stdout = log_file
 # -------------------------------
 # Librerías necesarias
 import pandas as pd
@@ -46,6 +56,7 @@ prediccion = knn.predict(X_test)            # Predicción en test
 esperado = y_test
 
 # Mostrar métricas del KNN manual
+print("\nReporte de clasificación:")
 print(classification_report(y_test, prediccion, zero_division=0))
 
 # Matriz de confusión del KNN manual
@@ -134,3 +145,17 @@ sns.barplot(x='Métrica', y='Valor', hue='Modelo', data=df_metrics)
 plt.ylim(0,1)
 plt.title("Comparación de métricas: KNN Manual vs Optimizado")
 plt.show()
+
+
+plt.savefig("docs/matriz_confusion.png")  
+plt.close()
+plt.savefig("docs/comparacion_metricas.png")
+plt.close()
+
+
+
+
+
+#cerrar redireccion
+sys.stdout = sys.__stdout__
+log_file.close()
