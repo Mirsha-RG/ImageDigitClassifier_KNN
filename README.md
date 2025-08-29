@@ -19,12 +19,6 @@ Permite reconocer números escritos a mano o generados digitalmente, usando KNN 
 - Mejor score en validación cruzada: 0.985  
 - Matrices de confusión y métricas comparativas muestran la mejora respecto al modelo manual.
 
-### Matriz de confusión - KNN Manual
-![Matriz manual](docs/matriz_confusion_manual.png)
-
-### Matriz de confusión - KNN Optimizado
-![Matriz optimizado](docs/matriz_confusion_optimizado.png)
-
 Puedes consultar todos los resultados completos aquí: 👉 [docs/resultados.txt](docs/resultados.txt)
 
 
